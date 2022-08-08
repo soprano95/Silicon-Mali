@@ -71,5 +71,12 @@ group :test do
   gem "webdrivers"
 end
 
+
+gem 'capistrano', '~> 3.11'
+gem 'capistrano-rails', '~> 1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+
+
 gem 'bootstrap', '~> 5.2.0'
 gem 'jquery-rails'
