@@ -15,7 +15,7 @@ set :branch, "main"
 
  set :passenger_restart_with_touch, true
 
- set :rbenv_path, '/home/siliconmali/.rbenv
+ set :rbenv_path, '$HOME/siliconmali/.rbenv'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -28,7 +28,7 @@ set :branch, "main"
 # set :pty, true
 
 # Default value for :linked_files is []
-# append :linked_files, "config/database.yml", 'config/master.key'
+# append :linked_files, "config/database.yml", '#config/master.key'
 
 # Default value for linked_dirs is []
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "tmp/webpacker", "public/system", "vendor", "storage"
