@@ -71,10 +71,9 @@ group :test do
   gem "webdrivers"
 end
 
-gem 'rbnacl', '< 5.0', :require => false                                                                                                                                                                
-gem 'rbnacl-libsodium', :require => false                                                                                                                                                               
-gem 'bcrypt_pbkdf', '< 2.0', :require => false
-
+ gem 'net-ssh', '>= 6.0.2'
+  gem 'ed25519', '>= 1.2', '< 2.0'
+  gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 
 gem 'capistrano', '~> 3.11'
 gem 'capistrano-rails', '~> 1.4'
