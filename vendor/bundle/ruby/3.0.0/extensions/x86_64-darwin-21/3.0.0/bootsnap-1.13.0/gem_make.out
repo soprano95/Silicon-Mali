@@ -1,0 +1,15 @@
+current directory: /Users/abdoulazizsacko/Desktop/Silicon-Mali/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.13.0/ext/bootsnap
+/Users/abdoulazizsacko/.rbenv/versions/3.0.3/bin/ruby -I /Users/abdoulazizsacko/.rbenv/versions/3.0.3/lib/ruby/3.0.0 -r ./siteconf20220808-1370-99qyxa.rb extconf.rb
+creating Makefile
+
+current directory: /Users/abdoulazizsacko/Desktop/Silicon-Mali/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.13.0/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /Users/abdoulazizsacko/Desktop/Silicon-Mali/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.13.0/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/abdoulazizsacko/Desktop/Silicon-Mali/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.13.0/ext/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20220808-1370-3mimq1/bootsnap
