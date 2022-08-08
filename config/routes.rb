@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :titles
   get 'pages/index'
   get 'pages/about'
   get 'pages/contact'
