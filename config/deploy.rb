@@ -15,6 +15,8 @@ set :branch, "main"
 
  set :passenger_restart_with_touch, true
 
+ append :linked_files,  'config/credentials/production.key',
+
  #set :rbenv_path, '$HOME/siliconmali/.rbenv/versions/3.0.3'
 
 # Default value for :format is :airbrussh.
