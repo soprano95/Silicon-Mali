@@ -8,6 +8,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1 or /blogs/1.json
   def show
+    @blog.update(views: @blog.views + 1)
   end
 
   # GET /blogs/new

@@ -5,6 +5,8 @@
     <%= blog.title %>
   </p>
 
+  <h6><%= pluralize(blog.views, "view") %></h6>
+
   <p>
     <strong>Body:</strong>
     <%= blog.body %>
