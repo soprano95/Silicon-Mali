@@ -84,3 +84,5 @@ gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 gem 'bootstrap', '~> 5.2.0'
 gem 'jquery-rails'
 gem 'devise', '~> 4.8', '>= 4.8.1'
+
+gem "ransack", "~> 3.2"
