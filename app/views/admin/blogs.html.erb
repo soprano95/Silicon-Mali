@@ -1,0 +1,25 @@
+<div class="container">
+  <h1 class="text-center">Adminstrator</h1>
+  <%= render 'admin/nav_links' %>
+  <%#= render partial: 'admin/total_daily_views' %>
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Blog</th>
+        <th scope="col">Author</th>
+        <th scope="col">Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @blogs.each do |blog| %>
+        <tr>
+          <th scope="row"><%= blog.id %></th>
+          <td><%= link_to blog.title.truncate(15), admin_blog_path(blog) %></td>
+          <td><%= blog.user.name %></td>
+          <td><%#= pluralize(blog.comments.size, "Comment") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

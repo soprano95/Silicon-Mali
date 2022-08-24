@@ -1,0 +1,29 @@
+<div class="container">
+  <h1 class="text-center">Administrator</h1>
+  <%= render "admin/nav_links" %>
+  <div class="text-center mt-5">
+    <div class="btn-group">
+      <%= link_to "Edit", edit_blog_path(@blog), class:"btn btn-warning" %>
+      <%= button_to "Delete", @blog, method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger" %>
+    </div>
+  </div>
+  <%#= area_chart @blog.views_by_day, colors: ["#a00a"] %>
+  <div class="row mt-1">
+    <p>
+      <strong>Title:</strong> <%= @blog.title %>
+    </p>
+  </div>
+  <div class="row mt-1">
+    <p>
+      <strong>Views:</strong> <%= @blog.views %>
+    </p>
+  </div>
+  <div class="row mt-1">
+    <p><strong>Author:</strong>
+      <%= "#{@blog.user.email} | #{@blog.user.name} | #{pluralize(@blog.user.views, "View")}" %>
+    </p>
+  </div>
+  <div class="row mt-1">
+    <strong>Body:</strong> <%= @blog.body %>
+  </div>
+</div>
