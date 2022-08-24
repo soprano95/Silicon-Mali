@@ -12,7 +12,7 @@
       <% @blogs.each do |blog| %>
         <tr>
           <td><%= link_to blog.title, blog %></td>        
-          <td><%= blog.body.truncate_words(25) %></td>
+          <td><%= blog.body.to_plain_text.truncate_words(25) %></td>
           <td><%= link_to blog.user.name, blog.user %></td>
         </tr>
       <% end %>
