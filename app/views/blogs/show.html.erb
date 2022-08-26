@@ -10,3 +10,12 @@
   <%= button_to "Destroy this blog", @blog, method: :delete %>
 </div>
 </div>
+
+<div class="container">
+  <%= render 'comments/form', blog: @blog %>
+  <% @comments.each do |comment| %>
+    <%= render 'comments/comment', 
+    post: @post, 
+    comment: comment %>
+  <% end %>
+</div>

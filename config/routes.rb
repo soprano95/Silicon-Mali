@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   }
 
   get '/u/:id', to: 'users#profile', as: 'user'
-  resources :blogs
+  resources :blogs do
+    resources :comments
+  end
   
   get 'pages/about'
   get 'pages/contact'

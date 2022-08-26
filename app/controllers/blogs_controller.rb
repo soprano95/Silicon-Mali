@@ -9,6 +9,8 @@ class BlogsController < ApplicationController
   # GET /blogs/1 or /blogs/1.json
   def show
     @blog.update(views: @blog.views + 1)
+    @comments = @blog.comments.includes(:user, :rich_text_body).order(created_at: :desc)
+
   end
 
   # GET /blogs/new
