@@ -19,11 +19,15 @@
       id: "edit-button-#{comment.id}" %>
       <%= button_to "Delete", [@blog, comment], class:"btn btn-danger", method: :delete %>
     </div>
-   
+   <div id="edit-form-<%= comment.id%>" class="d-none">
+      <%= render 'comments/form',
+       blog: @blog,
+       comment: comment,
+       submit_label: "Update" %>
+    </div>
   <% end %>
   <hr />
-  <%= comment.body %>
-  <#div id="comment-body-<%= comment.id %>">
-    
-  <#/div>
+ <div id="comment-body-<%= comment.id %>">
+    <%= comment.body %>
+  </div>
 </div>

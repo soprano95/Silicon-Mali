@@ -12,7 +12,7 @@
 </div>
 
 <div class="container">
-  <%= render 'comments/form', blog: @blog %>
+  <%= render 'comments/form', blog: @blog, comment: @blog.comments.build %>
   <% @comments.each do |comment| %>
     <%= render 'comments/comment', 
     post: @post, 
