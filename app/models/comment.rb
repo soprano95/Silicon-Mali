@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
-  belongs_to :blog
+  belongs_to :blog, counter_cache: true
   belongs_to :user
   has_rich_text :body
 

@@ -26,4 +26,13 @@
   <div class="row mt-1">
     <strong>Body:</strong> <%= @blog.body %>
   </div>
+  <div class="row mt-1">
+    <strong><%= pluralize(@blog.comments.count, "Comment") %>:</strong>
+    <% @blog.comments.each do |comment| %>
+      <div class="row mt-1">
+        <%= comment.user.name %>
+        <%= comment.body %>
+      </div>
+    <% end %>
+  </div>
 </div>

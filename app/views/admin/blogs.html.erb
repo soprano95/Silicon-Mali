@@ -17,7 +17,7 @@
           <th scope="row"><%= blog.id %></th>
           <td><%= link_to blog.title.truncate(15), admin_blog_path(blog) %></td>
           <td><%= blog.user.name %></td>
-          <td><%#= pluralize(blog.comments.size, "Comment") %></td>
+          <td><%= pluralize(blog.comments.size, "Comment") %></td>
         </tr>
       <% end %>
     </tbody>

@@ -54,6 +54,8 @@ GEM
     activerecord (7.0.3.1)
       activemodel (= 7.0.3.1)
       activesupport (= 7.0.3.1)
+    activerecord-import (1.4.0)
+      activerecord (>= 4.2)
     activestorage (7.0.3.1)
       actionpack (= 7.0.3.1)
       activejob (= 7.0.3.1)
@@ -82,6 +84,9 @@ GEM
       popper_js (>= 2.11.5, < 3)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
+    bullet (7.0.3)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     capistrano (3.17.1)
       airbrussh (>= 1.0.0)
       i18n
@@ -287,6 +292,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
+    uniform_notifier (1.16.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -311,10 +317,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activerecord-import (~> 1.4)
   bcrypt (~> 3.1.7)
   bcrypt_pbkdf (>= 1.0, < 2.0)
   bootsnap
   bootstrap (~> 5.2.0)
+  bullet (~> 7.0)
   capistrano (~> 3.11)
   capistrano-passenger (~> 0.2.0)
   capistrano-rails (~> 1.4)
