@@ -88,3 +88,5 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem "ransack", "~> 3.2"
 
 gem "noticed", "~> 1.5"
+
+gem "friendly_id", "~> 5.4"
