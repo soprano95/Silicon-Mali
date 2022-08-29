@@ -11,6 +11,8 @@ class BlogsController < ApplicationController
     @blog.update(views: @blog.views + 1)
     @comments = @blog.comments.includes(:user, :rich_text_body).order(created_at: :desc)
 
+    mark_notifications_as_read
+
   end
 
   # GET /blogs/new
@@ -70,4 +72,11 @@ class BlogsController < ApplicationController
     def blog_params
       params.require(:blog).permit(:title, :body)
     end
+
+    def mark_notifications_as_read
+    if current_user
+      notifications_to_mark_as_read = @blog.notifications_as_blog.where(recipient: current_user)
+      notifications_to_mark_as_read.update_all(read_at: Time.zone.now)
+    end
+  end
 end
