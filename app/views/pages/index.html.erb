@@ -11,7 +11,7 @@
     <h2>User Info</h2>
     <h3><%= current_user.full_name %></h1>
     <ul>
-      <li><%#= current_user.address.street.titleize %></li>
+      <li><%= current_user.address.street.titleize %></li>
       <li><%= current_user.address.city.titleize %></li>
       <li><%= current_user.address.state.titleize %></li>
       <li><%= current_user.address.zip %></li>
