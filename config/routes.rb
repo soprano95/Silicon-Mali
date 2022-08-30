@@ -7,13 +7,17 @@ Rails.application.routes.draw do
     get 'admin/show_blog/:id', to: 'admin#show_blog', as: 'admin_blog'
   end
   get 'search', to: 'search#index'
-  get 'users/profile'
+  
  devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
 
   get '/u/:id', to: 'users#profile', as: 'user'
+
+  resources :after_signup
+
+
   resources :blogs do
     resources :comments
   end

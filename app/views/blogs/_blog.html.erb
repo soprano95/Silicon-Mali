@@ -4,7 +4,7 @@
     <strong>Title:</strong>
     <%= blog.title %>
   </p>
-  <h4>posted by <%= link_to blog.user.name, user_path(blog.user) %></h4>
+  <h4>posted by <%= link_to blog.user.first_name, user_path(blog.user) %></h4>
 
   <h6><%= pluralize(blog.views, "view") %></h6>
 

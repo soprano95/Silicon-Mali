@@ -13,6 +13,6 @@ class AdminController < ApplicationController
   end
 
   def show_blog
-     @blog = Blog.includes(:user, [:user, :rich_text_body]).find(params[:id])
+     @blog = Blog.includes(:user, comments: [:user, :rich_text_body]).find(params[:id])
   end
 end

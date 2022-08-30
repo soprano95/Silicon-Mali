@@ -20,7 +20,7 @@
   </div>
   <div class="row mt-1">
     <p><strong>Author:</strong>
-      <%= "#{@blog.user.email} | #{@blog.user.name} | #{pluralize(@blog.user.views, "View")}" %>
+      <%= "#{@blog.user.email} | #{@blog.user.full_name} | #{pluralize(@blog.user.views, "View")}" %>
     </p>
   </div>
   <div class="row mt-1">
@@ -30,7 +30,7 @@
     <strong><%= pluralize(@blog.comments.count, "Comment") %>:</strong>
     <% @blog.comments.each do |comment| %>
       <div class="row mt-1">
-        <%= comment.user.name %>
+        <%= comment.user.full_name %>
         <%= comment.body %>
       </div>
     <% end %>
