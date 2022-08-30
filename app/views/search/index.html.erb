@@ -5,7 +5,7 @@
 			<tr>
 				<th><%= sort_link(@query, :title, "Title", default_order: :asc) %></th>
                 <th><%= sort_link(@query, :body, "Blog Content") %></th>
-                <th><%= sort_link(@query, :user_name, "Users") %></th>
+                <th><%= sort_link(@query, :full_name, "Users") %></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -13,7 +13,7 @@
         <tr>
           <td><%= link_to blog.title, blog %></td>        
           <td><%= blog.body.to_plain_text.truncate_words(25) %></td>
-          <td><%= link_to blog.user.name, blog.user %></td>
+          <td><%= link_to blog.user.full_name, blog.user %></td>
         </tr>
       <% end %>
     </tbody>
