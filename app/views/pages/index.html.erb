@@ -9,7 +9,6 @@
 <% if current_user %>
   <div class="container card mt-4">
     <h2>User Info</h2>
-    <%= link_to "Manage Billing", @portal_session.url unless @portal_session.nil? %>
     <h3><%= current_user.full_name %></h1>
     <ul>
       <li><%= current_user.address.street.titleize %></li>
