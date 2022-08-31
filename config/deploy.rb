@@ -16,7 +16,12 @@ set :branch, "main"
  set :passenger_restart_with_touch, true
 
  
-
+namespace :deploy do
+  desc "reload the database with seed data"
+  task :seed do
+    run "cd #{current_path}; rake db:seed RAILS_ENV=#{rails_env}"
+  end
+end
  #set :rbenv_path, '$HOME/siliconmali/.rbenv/versions/3.0.3'
 
 # Default value for :format is :airbrussh.
