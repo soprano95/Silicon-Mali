@@ -34,6 +34,12 @@
                  country: 'USA',
                  user: User.second)
 
+  category = Category.first_or_create!(name: 'Uncategorized', display_in_nav: true)
+  Category.first_or_create!(name: 'General', display_in_nav: true)
+  Category.first_or_create!(name: 'Finance', display_in_nav: true)
+  Category.first_or_create!(name: 'Health', display_in_nav: false)
+  Category.first_or_create!(name: 'Education', display_in_nav: false)
+
 
 elapsed = Benchmark.measure do
   blogs = []
@@ -41,7 +47,8 @@ elapsed = Benchmark.measure do
     puts "Creating blogs #{x}"
     blog = Blog.new(title: "Title #{x}",
                     body: "Body #{x} Words go here Idk",
-                    user: abdoulaziz)
+                    user: abdoulaziz,
+                    category: category)
 
     5.times do |y|
       puts "Creating comment #{y} for blog #{x}"

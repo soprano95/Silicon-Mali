@@ -1,0 +1,9 @@
+<div id="<%= dom_id category %>">
+  <h2>
+    <% target = action_name.eql?("show") ? categories_path : category %>
+    <%= link_to category.name, target %>
+  </h2>
+  <% category.blogs.includes(:user, :rich_text_body).each do |blog| %>
+    <%= render "blogs/blog", blog: blog %>
+  <% end %>
+</div>
